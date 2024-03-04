@@ -21,10 +21,10 @@ export default function ProjectsList({ projects }: { projects: any}) {
     return (
         <div id="projects_list" className='flex flex-col items-center w-11/12 border-2 border-dark-blue rounded-md overflow-scroll max-h-72 overflow-x-hidden'>
             {projects.map((project: any, index: number) => (
-                <div key={index}  onClick={(e) => { handleProjectOpen(e, project) }} className={`  cursor-pointer flex flex-row lg:flex-col justify-evenly items-center w-full py-6 lg:py-3 opacity-95 hover:opacity-100 transition-all ${index % 2 ? "bg-light-blue" : "bg-light-pink"} hover:bg-beige `}>
-                    <BodyText text={project.basics.title} text_color="dark-blue" styling="font-medium" size="normal"></BodyText>
+                <div key={index}  onClick={(e) => { handleProjectOpen(e, project) }} className={`cursor-pointer flex flex-row lg:flex-col justify-evenly items-center w-full py-6 lg:py-3 opacity-95 hover:opacity-100 transition-all ${index % 2 ? "bg-light-blue" : "bg-light-pink"} hover:bg-beige `}>
+                    <BodyText text={project.basics.title} text_color="dark-blue" styling="font-medium text-center mx-2" size="normal"></BodyText>
                     <div className={`flex flex-row justify-center `}>
-                        <BodyText text={`${project.basics.month} ${project.basics.year}`} text_color="dark-blue" styling="" size="small"></BodyText>
+                        <BodyText text={`${project.basics.month} ${project.basics.year}`} text_color="dark-blue" styling="text-center" size="small"></BodyText>
                     </div>
                 </div>
             ))}

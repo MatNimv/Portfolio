@@ -18,9 +18,9 @@ export const Filter = ({projects } : {
         const [filteredProjectsLength, setFilteredProjectsLength] = useState(0);
         const [hasFiltered, setHasFiltered] = useState(false);
 
-        const program_skills = ["JavaScript", "HTML", "CSS", "ReactJS", "NodeJS", "PHP", "Figma", "GCP"];
+        const program_skills = ["JavaScript", "HTML", "CSS", "ReactJS", "NodeJS", "PHP", "Figma", "GCP", "SQL"];
         const paint_skills = ["Digital", "Traditional", "Procreate"];
-        const misc_skills = ["Blender", "Animation"];
+        const misc_skills = ["Blender", "Animation", "Game Design"];
 
         const filterProjects = () => {
             let selected_checkboxes = checkCheckBoxes()
@@ -154,7 +154,7 @@ export const Filter = ({projects } : {
                             <div className="flex w-full flex-wrap justify-around border-2 border-dark-blue p-2 rounded-md">
                                 {skills.map((skill, index) => (
                                     <div key={index} className="flex flex-col items-center w-3/12">
-                                        <BodyText text={skill} text_color="dark-blue" styling="" size="small"></BodyText>
+                                        <BodyText text={skill} text_color="dark-blue" styling="text-center" size="small"></BodyText>
                                         <input key={index} type="checkbox" value={skill}></input>
                                     </div>
                                 ))}
@@ -178,7 +178,7 @@ export const Filter = ({projects } : {
                         disabled={false}
                         handleClick={resetFilters}
                         href=""
-                        styling=""
+                        styling="ml-3"
                         ></Button>
                     </div>
                     {hasFiltered === false ? (<div></div>) : (<Header size="h6" styling="mt-5 mb-2" text_color="dark-blue" text={`Projects: ${filteredProjectsLength}`}></Header>)}

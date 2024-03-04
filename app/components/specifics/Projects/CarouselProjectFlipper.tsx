@@ -57,10 +57,10 @@ export function CarouseProjectFlipper ({projects, styling } : {
                 {projects.map((project, index) => (
                     <div key={index} className="opacity-90 hover:opacity-100 hover:cursor-pointer transition-all" >
                         <div className='relative z-10 ' >
-                            <div className='bg-gradient-to-t from-black absolute backdrop-blur-sm rounded-md z-20 h-full w-full bottom-0' onClick={(e) => { handleProjectOpen(e, project) }}>
-                                <div className="absolute bottom-2 text-left ml-6 z-30 " onClick={(e) => { handleProjectOpen(e, project) }}>
-                                    <Header text={project.basics.title} text_color="beige" size="h5" styling='relative z-30'></Header>
-                                    <BodyText text={`${project.basics.month} ${project.basics.year}`} size="small" styling='md:my-5 mb-10' text_color='light-pink'></BodyText>
+                            <div className=' absolute bg-black/75 backdrop-blur-sm rounded-md z-20 h-full w-full bottom-0' onClick={(e) => { handleProjectOpen(e, project) }}>
+                                <div className="relative z-30 h-full flex flex-col justify-center" onClick={(e) => { handleProjectOpen(e, project) }}>
+                                    <Header text={project.basics.title} text_color="beige" size="h2" styling='relative z-30'></Header>
+                                    <BodyText text={`${project.basics.month} ${project.basics.year}`} size="large" styling='md:my-5 mb-10' text_color='light-pink'></BodyText>
                                 </div>
                             </div>
                                 <img className="mb-4 h-80 bg-contain relative z-10 rounded-md"  src={project.images[0].url} alt={project.images[0].alt}></img>

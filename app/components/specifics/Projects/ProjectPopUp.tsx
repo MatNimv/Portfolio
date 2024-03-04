@@ -24,7 +24,7 @@ export function ProjectPopUp ({project, isProjectOpen, handleClose} : {
                 
                 <div className="flex items-center flex-col mt-7">
                 <RxCross1 className="w-10 h-10 my-7 mb-10 md:w-20 md:h-20 text-light-blue z-60 hover:text-dark-blue transition-all" onClick={handleClose}></RxCross1>
-                    <Header text_color="light-pink" text={project.basics.title} size="h3" styling="mb-3"></Header>
+                    <Header text_color="light-pink" text={project.basics.title} size="h3" styling="mb-3 text-center"></Header>
                     <Header text_color="light-pink" text={`${project.basics.month} ${project.basics.year}`} size="h4" styling="mt-4"></Header>
                     <div className="flex flex-row justify-around">
                         <Header text_color="light-pink" text={`${project.size} Size `} size="h6" styling="mt-4 mr-2"></Header>

@@ -12,7 +12,7 @@ function BodyText({ text, text_color, size, styling }:
 
     switch (size) {
         case "large":
-            converted_size = "text-md lg:text-2xl xl:text-4xl";
+            converted_size = "text-xl lg:text-2xl xl:text-4xl";
             break;
         case "normal":
             converted_size = "text-lg lg:text-xl xl:text-3xl";

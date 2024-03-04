@@ -56,8 +56,6 @@ export default function Home() {
 
     const timeout = setTimeout(() => {
       setShowVideo(false);
-      console.log("show false");
-      console.log(showVideo);
     }, 5000); // Hide the video after 5 seconds (adjust as needed)
     getData();
     document.body!.style.overflowY = "scroll";
